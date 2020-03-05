@@ -324,8 +324,7 @@ public class Game extends Application {
                      * @param event2 the event
                      */
                     public void handle(MouseEvent event2) {
-                        boolean canMove = false;
-                        
+
                         
                         
                         if(event2.getX() <= Game.totalLength)
@@ -378,7 +377,7 @@ public class Game extends Application {
                         
 
                         
-                        canMove = false;
+                        boolean canMove = false;
                         // LV1
                         try {
                             currentSquare.setFill(currentSquare.getColor());

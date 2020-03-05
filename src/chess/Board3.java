@@ -53,9 +53,9 @@ public class Board3 extends Board {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 if ((i+j) % 2 == 0 )
-                squares[i][j] = new Square(i, j, Color.WHEAT,this);
+                squares[i][j] = new Square(i, j, Color.DARKCYAN,this);
                 else 
-                    squares[i][j] = new Square(i, j, Color.GREEN,this);
+                    squares[i][j] = new Square(i, j, Color.DARKBLUE,this);
 //                board.add(squares[i][j], i, j);
 //                board.getColumnConstraints().add(new ColumnConstraints(60));
 //                board.getRowConstraints().add(new RowConstraints(60));

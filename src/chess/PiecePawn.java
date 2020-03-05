@@ -237,7 +237,7 @@ public class PiecePawn extends Piece {
             }
 
             // Move only one grid forward after the first move
-            if (YrowNum >= 0 && YrowNum <= 5) {
+            if (YrowNum > 0) {
                 
                 if (!board.getSquare(XcolNum, YrowNum - 1).isOccupied) {
                     availableSquares.add(board.getSquare(XcolNum, YrowNum - 1));
