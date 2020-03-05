@@ -157,13 +157,8 @@ public class Board extends Group {
 //    }
     
     public Square getSquareBY_JAVAFX_Coor(double raw_X,double raw_Y) {
-       
         int got_SQR_X = getSquareX(raw_X, raw_Y);
-
-
         int got_SQR_Y = getSquareY(raw_X, raw_Y);
-
-        System.out.println("===================================="+got_SQR_X + " "+got_SQR_Y);
         return squares[got_SQR_X][got_SQR_Y];    
       
     }
@@ -268,6 +263,8 @@ public class Board extends Group {
     public void selectBlackPiece(Piece myPiece) {
         
         try {
+            System.out.println("in SELECT PIECE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!+++++++++++++++++++++++++++++++==");
+            System.out.println("Mypuiece" + myPiece);
             //IF CHOSEN BLACK PIECES
             //SET ALL BLACKS TO ACTIVE
             if(myPiece.getOwner().getColour()==Color.BLACK) {
@@ -314,7 +311,7 @@ public class Board extends Group {
             try {
                 myPiece.getSquare().setActive(true);
             } catch (Exception e) {
-//                myPiece.getSquare().setActive(false);
+                myPiece.getSquare().setActive(false);
                 System.out.println("Set Active failed..");
             }
         }
@@ -348,7 +345,7 @@ public class Board extends Group {
         int got_SQR_X = board.getSquareX(x, y);
         int got_SQR_Y = board.getSquareY(x, y);
         System.out.println("Strange at Board line 355, cannot  get piece");
-        System.out.println("selectedPiece.getOwner().getColour() " + selectedPiece);
+        System.out.println("selectedPiece.getOwner().getColour()++++++++++++++++++++++++++++++++++++++ " + selectedPiece);
         if(selectedPiece.getOwner().getColour()==Color.BLACK) {
             System.out.println("the Square to go is occupied? " + board.getSquare(got_SQR_X, got_SQR_Y).isOccupied);
 

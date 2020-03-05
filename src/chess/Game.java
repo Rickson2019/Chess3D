@@ -324,6 +324,7 @@ public class Game extends Application {
                      * @param event2 the event
                      */
                     public void handle(MouseEvent event2) {
+                        boolean canMove = false;
 
                         
                         
@@ -377,7 +378,7 @@ public class Game extends Application {
                         
 
                         
-                        boolean canMove = false;
+                        canMove = false;
                         // LV1
                         try {
                             currentSquare.setFill(currentSquare.getColor());
@@ -444,10 +445,12 @@ public class Game extends Application {
                                         moveToSquare.board.moveBlackPiece(event2.getX(), event2.getY(),moveToSquare.board);
                                         currentSquare.setPiece(null);
                                         currentSquare.isOccupied = false;
+                                        currentSquare.setActive(false);
                                     }
                                     if (!canMove) {
                                         currentSquare.setPiece(tmpPicePiece);
                                         currentSquare.isOccupied = true;
+                                        currentSquare.setActive(false);
                                     }
                                 } catch (Exception e) {
                                     currentSquare.setPiece(selectedPiece);
@@ -482,10 +485,12 @@ public class Game extends Application {
                                     moveToSquare.board.moveWhitePiece(event2.getX(), event2.getY(),moveToSquare.board);
                                     currentSquare.setPiece(null);
                                     currentSquare.isOccupied = false;
+                                    currentSquare.setActive(false);
                                 }
                                 if (!canMove) {
                                     currentSquare.setPiece(tmpPicePiece);
                                     currentSquare.isOccupied = true;
+                                    currentSquare.setActive(false);
                                 }
                             }
                         } catch (Exception e) {
